@@ -77,9 +77,9 @@
     /* ── NAV ── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,0.96);
+      background: rgba(14,31,91,0.97);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(255,255,255,.1);
     }
     .nav-inner {
       display: flex; align-items: center;
@@ -93,7 +93,7 @@
     .nav-logo img { height: 38px; width: 38px; object-fit: contain; border-radius: 8px; }
     .nav-logo span {
       font-size: 18px; font-weight: 700;
-      color: var(--navy); letter-spacing: -.02em;
+      color: var(--white); letter-spacing: -.02em;
     }
     .nav-links {
       display: flex; gap: 32px; list-style: none;
@@ -101,10 +101,10 @@
     .nav-links a {
       text-decoration: none;
       font-size: 14px; font-weight: 500;
-      color: var(--slate);
+      color: rgba(255,255,255,.75);
       transition: color .2s;
     }
-    .nav-links a:hover { color: var(--navy); }
+    .nav-links a:hover { color: var(--white); }
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 10px 22px;
@@ -686,16 +686,7 @@
   <div class="container">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="38" height="38" rx="9" fill="#0e1f5b"/>
-          <circle cx="19" cy="19" r="11" stroke="#2563eb" stroke-width="1.5" fill="none"/>
-          <path d="M8 19h22M19 8c-3 4-3 18 0 22M19 8c3 4 3 18 0 22" stroke="#2563eb" stroke-width="1.2" fill="none"/>
-          <circle cx="24" cy="13" r="1.5" fill="#f59e0b"/>
-          <circle cx="27" cy="16" r="1.5" fill="#f59e0b"/>
-          <line x1="24" y1="13" x2="27" y2="16" stroke="#f59e0b" stroke-width="1.2"/>
-          <line x1="27" y1="16" x2="30" y2="15" stroke="#f59e0b" stroke-width="1.2"/>
-          <circle cx="30" cy="15" r="1.5" fill="#f59e0b"/>
-        </svg>
+        <img src="groundstate_logo.png" alt="GroundState logo" style="height:42px;width:42px;object-fit:contain;" />
         <span>GroundState</span>
       </a>
       <ul class="nav-links">
@@ -985,27 +976,27 @@
     </p>
     <div class="tech-grid">
       <div class="tech-card">
-        <div class="tech-num">Component 01</div>
-        <h3>Heterogeneous Graph Neural Network (HGNN)</h3>
-        <p>Fuses ownership graph nodes — entities, directors, shareholders, beneficial owners — with transaction flow nodes into a single heterogeneous structure. Relation-specific message passing with separate attention heads detects circular shareholding, nominee director arrangements, and synthetic revenue flows that are invisible to tabular or text-only models.</p>
+        <div class="tech-num">Capability 01</div>
+        <h3>Relational Fraud Detection</h3>
+        <p>Uncovers fraud patterns that are invisible to conventional screening tools — including circular ownership structures, disguised beneficial control, and fabricated revenue flows engineered through connected entities. Where standard checks examine companies in isolation, GroundState analyses the web of relationships between them, surfacing what individual entity lookups cannot.</p>
         <span class="tech-pill">Fraud Detection</span>
       </div>
       <div class="tech-card">
-        <div class="tech-num">Component 02</div>
-        <h3>Federated GNN Training Under Data Sovereignty</h3>
-        <p>The global corporate graph is divided into country-specific subgraphs trained locally. Only anonymised, differentially-private gradient updates — never raw entity records — are transmitted to a Singapore-based aggregation server. Cross-border entity relationships are represented via hashed privacy-preserving node anchors. A formal ε-DP budget provides guarantees auditable by local regulators.</p>
-        <span class="tech-pill">Primary Technical Novelty</span>
+        <div class="tech-num">Capability 02</div>
+        <h3>Privacy-Compliant Cross-Border Intelligence</h3>
+        <p>Operates in full compliance with the data localisation laws of Vietnam, Indonesia, Malaysia, and the Philippines — without sacrificing the regional intelligence that makes verification meaningful. Sensitive records are never transmitted across borders, yet the platform builds a continuously improving picture of fraud patterns across the entire region.</p>
+        <span class="tech-pill">Regulatory Compliance</span>
       </div>
       <div class="tech-card">
-        <div class="tech-num">Component 03</div>
-        <h3>Southeast Asia-Specific Legal Language Model</h3>
-        <p>Standard multilingual models achieve below 60% entity extraction accuracy on SEA legal texts. Gukom constructs a domain-specific annotated corpus across five jurisdictions and applies parameter-efficient LoRA fine-tuning — targeting &gt;85% F1 on named entity recognition. An entity schema standardisation layer normalises outputs across heterogeneous legal systems.</p>
-        <span class="tech-pill">Legal NLP · LoRA Fine-Tuning</span>
+        <div class="tech-num">Capability 03</div>
+        <h3>Southeast Asian Legal Document Intelligence</h3>
+        <p>Accurately reads and extracts ownership, control, and entity information from Southeast Asian legal and regulatory documents — across five jurisdictions and multiple languages. Generic AI tools fail at this because they were never built for the region's unique regulatory vocabulary and legal frameworks. GroundState was.</p>
+        <span class="tech-pill">Legal Document Analysis</span>
       </div>
       <div class="tech-card">
-        <div class="tech-num">Component 04</div>
-        <h3>Bayesian-HMM Timeline Reconstruction Engine</h3>
-        <p>Corporate registries routinely contain conflicting records — a tax authority may record an ownership change 6–18 months before the business registry. Our engine models entity state transitions using a Hidden Markov Model, treating each registry as a probabilistic observation source. Bayesian evidence fusion reconstructs the most probable ownership sequence with confidence-scored timelines.</p>
+        <div class="tech-num">Capability 04</div>
+        <h3>Authoritative Ownership Timeline Reconstruction</h3>
+        <p>Produces a single, confidence-scored ownership timeline even when government registries disagree — as they routinely do across Southeast Asia. When a tax authority and a business registry record conflicting ownership change dates, GroundState surfaces the most probable truth alongside a clear, auditable record of exactly what each source shows.</p>
         <span class="tech-pill">Multi-Registry Reconciliation</span>
       </div>
     </div>
@@ -1049,43 +1040,6 @@
   </div>
 </section>
 
-<!-- ══ MARKETS ══ -->
-<section id="markets" class="section">
-  <div class="container">
-    <span class="tag">Market Expansion</span>
-    <h2 class="section-title">Expanding across Southeast Asia's capital markets.</h2>
-    <p class="section-lead">
-      Revenue projections: Year 1 ~USD 112K → Year 3 ~USD 950K → Year 5 USD 2.8–3.2M, as API licensing compounds growth from Year 3.
-    </p>
-    <div class="markets-grid">
-      <div class="market-card">
-        <div class="market-flag">🇸🇬</div>
-        <div class="market-name">Singapore</div>
-        <span class="market-status active">Year 1</span>
-      </div>
-      <div class="market-card">
-        <div class="market-flag">🇻🇳</div>
-        <div class="market-name">Vietnam</div>
-        <span class="market-status active">Year 1</span>
-      </div>
-      <div class="market-card">
-        <div class="market-flag">🇲🇾</div>
-        <div class="market-name">Malaysia</div>
-        <span class="market-status y2">Year 2</span>
-      </div>
-      <div class="market-card">
-        <div class="market-flag">🇵🇭</div>
-        <div class="market-name">Philippines</div>
-        <span class="market-status y2">Year 2</span>
-      </div>
-      <div class="market-card">
-        <div class="market-flag">🇮🇩</div>
-        <div class="market-name">Indonesia</div>
-        <span class="market-status y3">Year 3</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ══ ABOUT ══ -->
 <section id="about" class="section" style="background:var(--white);">
@@ -1103,13 +1057,6 @@
             <div>
               <h4>Singapore-Incorporated &amp; IP-Domiciled</h4>
               <p>All core IP — model weights, training pipelines, fraud-pattern datasets — is developed, owned, and domiciled in Singapore, reinforcing the city-state's role as ASEAN's trusted financial gateway.</p>
-            </div>
-          </div>
-          <div class="about-point">
-            <div class="about-point-icon">🤝</div>
-            <div>
-              <h4>Active Pilot Conversations</h4>
-              <p>Muzinich &amp; Co. (Singapore) and Deutsche Bank Singapore have been briefed on the platform and expressed interest in pre-deal borrower assessment and covenant monitoring pilots.</p>
             </div>
           </div>
           <div class="about-point">
@@ -1238,16 +1185,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">
-          <svg width="34" height="34" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="38" height="38" rx="9" fill="#1e40af"/>
-            <circle cx="19" cy="19" r="11" stroke="#93c5fd" stroke-width="1.5" fill="none"/>
-            <path d="M8 19h22M19 8c-3 4-3 18 0 22M19 8c3 4 3 18 0 22" stroke="#93c5fd" stroke-width="1.2" fill="none"/>
-            <circle cx="24" cy="13" r="1.5" fill="#f59e0b"/>
-            <circle cx="27" cy="16" r="1.5" fill="#f59e0b"/>
-            <line x1="24" y1="13" x2="27" y2="16" stroke="#f59e0b" stroke-width="1.2"/>
-            <line x1="27" y1="16" x2="30" y2="15" stroke="#f59e0b" stroke-width="1.2"/>
-            <circle cx="30" cy="15" r="1.5" fill="#f59e0b"/>
-          </svg>
+          <img src="groundstate_logo.png" alt="GroundState logo" style="height:40px;width:40px;object-fit:contain;" />
           <span>GroundState</span>
         </div>
         <p class="footer-desc">AI-powered due diligence infrastructure for Southeast Asia's capital markets, private credit, and MSME lending. By Gukom Pte. Ltd., Singapore.</p>
@@ -1258,7 +1196,7 @@
           <li><a href="#solution">How It Works</a></li>
           <li><a href="#services">Services &amp; Pricing</a></li>
           <li><a href="#technology">Technology</a></li>
-          <li><a href="#markets">Market Coverage</a></li>
+
         </ul>
       </div>
       <div class="footer-col">
